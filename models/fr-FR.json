@@ -1,0 +1,610 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "quiz us",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StartOverIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AnswerIntent",
+                    "slots": [
+                        {
+                            "name": "StateName",
+                            "type": "US_STATE_NAME"
+                        },
+                        {
+                            "name": "Capital",
+                            "type": "US_CITY"
+                        },
+                        {
+                            "name": "StatehoodYear",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER"
+                        },
+                        {
+                            "name": "Abbreviation",
+                            "type": "US_STATE_ABBR"
+                        },
+                        {
+                            "name": "StatehoodOrder",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{StateName}",
+                        "{Capital}",
+                        "{StatehoodYear}",
+                        "{StatehoodOrder}",
+                        "{Abbreviation}",
+                        "parle-moi de {StateName}",
+                        "parle-moi de {Capital}",
+                        "parle-moi de {StatehoodYear}",
+                        "parle-moi de {StatehoodOrder}",
+                        "parle-moi de {Abbreviation}",
+                        "que sais-tu de {StateName}",
+                        "que sais-tu de {Capital}",
+                        "que sais-tu de {StatehoodYear}",
+                        "que sais-tu de {StatehoodOrder}",
+                        "que sais-tu de {Abbreviation}",
+                        "information sur {StateName}",
+                        "information sur {Capital}",
+                        "information sur {StatehoodYear}",
+                        "information sur {StatehoodOrder}",
+                        "information sur {Abbreviation}"
+                    ]
+                },
+                {
+                    "name": "QuizIntent",
+                    "slots": [],
+                    "samples": [
+                        "commence un quiz",
+                        "commmence un jeu de quiz",
+                        "et commence un quiz",
+                        "et fais moi passer un quiz",
+                        "pour un quiz",
+                        "un quiz"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "US_STATE_ABBR",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "AK"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "AL"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "AZ"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "AR"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CO"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CT"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "DE"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "FL"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "GA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "HI"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ID"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "IL"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "IN"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "IA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "KS"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "KY"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "LA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ME"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MD"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MI"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MN"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MS"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MO"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MT"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NE"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NH"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NJ"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NM"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NY"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NC"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ND"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "OH"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "OK"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "OR"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "PA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "RI"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "SC"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "SD"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "TN"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "TX"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "UT"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "VT"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "VA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "WA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "WV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "WI"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "WY"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "US_STATE_NAME",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "AK"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "AL"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "AZ"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "AR"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CO"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CT"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "DE"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "FL"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "GA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "HI"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ID"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "IL"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "IN"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "IA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "KS"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "KY"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "LA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ME"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MD"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MI"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MN"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MS"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MO"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MT"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NE"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NH"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NJ"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NM"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NY"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NC"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ND"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "OH"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "OK"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "OR"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "PA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "RI"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "SC"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "SD"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "TN"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "TX"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "UT"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "VT"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "VA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "WA"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "WV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "WI"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "WY"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "US_CITY",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Chicago"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
