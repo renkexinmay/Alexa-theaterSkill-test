@@ -504,6 +504,8 @@ function askQuestion(handlerInput) {
 }
 
 function compareSlots(slots, value) {
+	const currentIntent = handlerInput.requestEnvelope.request.intent;
+    let prompt = '';
   for (const slot in slots) {
     if (Object.prototype.hasOwnProperty.call(slots, slot) && slots[slot].value !== undefined) {
       if (slots[slot].value.toString().toLowerCase() === value.toString().toLowerCase()) {

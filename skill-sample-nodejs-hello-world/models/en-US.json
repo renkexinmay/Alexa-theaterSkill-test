@@ -23,7 +23,7 @@
                     ]
                 },
                 {
-                    "name": "Whatever",
+                    "name": "WhateverIntent",
                     "slots": [
                         {
                             "name": "FreeText",
@@ -43,7 +43,7 @@
         "dialog": {
             "intents": [
                 {
-                    "name": "Whatever",
+                    "name": "WhateverIntent",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [

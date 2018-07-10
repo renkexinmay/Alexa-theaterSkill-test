@@ -24,12 +24,37 @@ const HelloWorldIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'HelloWorldIntent';
   },
   handle(handlerInput) {
-    const speechText = 'Hello World!';
+    const speechText = 'Hello Super World!';
 
     return handlerInput.responseBuilder
       .speak(speechText)
       .withSimpleCard('Hello World', speechText)
       .getResponse();
+  },
+};
+
+const WhateverIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'WhateverIntent';
+  },
+  handle(handlerInput) {
+  	console.log('Whateverintent started')
+    const currentIntent = handlerInput.requestEnvelope.request.intent;
+    var prompt = '';
+    for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
+      const currentSlot = currentIntent.slots[slotName];
+      console.log(currentSlot.value);
+      prompt = currentSlot.value + prompt
+    }
+    prompt = 'You said '+ prompt;
+
+    return handlerInput.responseBuilder
+      .speak(prompt)
+      .reprompt(prompt)
+      .withSimpleCard('Hello World', prompt)
+      .getResponse();
+
   },
 };
 
@@ -96,6 +121,7 @@ exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
     HelloWorldIntentHandler,
+    WhateverIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
