@@ -27,6 +27,9 @@
 
 const Alexa = require('ask-sdk-core');
 
+const i18n = require('i18next');
+const sprintf = require('i18next-sprintf-postprocessor');
+
 /* INTENT HANDLERS */
 
 const LaunchRequestHandler = {

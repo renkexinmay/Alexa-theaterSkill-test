@@ -11,6 +11,16 @@
           ],
           "name": "Hello World",
           "description": "Sample Full Description"
+        },
+        "fr-FR": {
+          "summary": "Sample Short Description",
+          "examplePhrases": [
+            "Alexa ouvre bonjour monde",
+            "hello",
+            "help"
+          ],
+          "name": "Bonjour Monde",
+          "description": "Sample Full Description"
         }
       },
       "isAvailableWorldwide": true,

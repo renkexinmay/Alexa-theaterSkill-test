@@ -158,7 +158,7 @@ const QuizAnswerHandler = {
     speakOutput += getAnswer(property, item);
     var question = ``;
     //IF YOUR QUESTION COUNT IS LESS THAN 10, WE NEED TO ASK ANOTHER QUESTION.
-    if (attributes.counter < 10) {
+    if (attributes.counter < 2) {
       speakOutput += getCurrentScore(attributes.quizScore, attributes.counter);
       question = askQuestion(handlerInput);
       speakOutput += question;
