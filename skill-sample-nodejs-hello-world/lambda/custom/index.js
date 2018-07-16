@@ -141,7 +141,7 @@ const languageStrings = {
   fr: {
     translation: {
       SKILL_NAME: 'Assistent für Minecraft in Deutsch',
-      WELCOME_MESSAGE: 'Bienvenue sur bonjour monde',
+      WELCOME_MESSAGE: 'Bienvenue dans la skill test Deepiks',
       WELCOME_REPROMPT: 'Wenn du wissen möchtest, was du sagen kannst, sag einfach „Hilf mir“.',
       DISPLAY_CARD_TITLE: '%s - Rezept für %s.',
       HELP_MESSAGE: 'Du kannst beispielsweise Fragen stellen wie „Wie geht das Rezept für eine %s“ oder du kannst „Beenden“ sagen ... Wie kann ich dir helfen?',
