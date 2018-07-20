@@ -12,17 +12,33 @@ const LaunchRequestHandler = {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
-  	const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
-  	const welcomeMessage = requestAttributes.t('WELCOME_MESSAGE');
-    return handlerInput.responseBuilder
-      .speak(welcomeMessage)
-      .reprompt(welcomeMessage)
-      .getResponse();
+   var accessToken = handlerInput.requestEnvelope.context.System.user.accessToken;
+
+    if (accessToken == undefined){
+        // The request did not include a token, so tell the user to link
+        // accounts and return a LinkAccount card
+        var speechText = "You must have a Deepiks account to use this skill. " + 
+                    "Please use the Alexa app to link your Amazon account " + 
+                    "with your Deepiks Account.";        
+        
+        return handlerInput.responseBuilder
+            .speak(speechText)
+            .withLinkAccountCard()
+            .getResponse();
+    } else {
+  	
+		const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+		const welcomeMessage = requestAttributes.t('WELCOME_MESSAGE');
+		return handlerInput.responseBuilder
+		  .speak(welcomeMessage)
+		  .reprompt(welcomeMessage)
+		  .getResponse();
+	}
   },
 };
 
 
-const generateAnswerHandler = {
+const generateAnswerIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
       && handlerInput.requestEnvelope.request.intent.name === 'generateAnswerIntent';
