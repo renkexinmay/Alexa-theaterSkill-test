@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "repeat test",
+            "invocationName": "theater play learning",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -16,7 +16,14 @@
                     "samples": []
                 },
                 {
-                    "name": "RepeatTestIntent",
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "bonjour"
+                    ]
+                },
+                {
+                    "name": "WhateverIntent",
                     "slots": [
                         {
                             "name": "FreeText",
@@ -27,11 +34,7 @@
                         }
                     ],
                     "samples": [
-                        "Repeat {FreeText}",
-                        "Please repeat {FreeText}",
-                        "Can you repeat {FreeText}",
-                        "I want you to repeat {FreeText}",
-                        "Repeat {FreeText} please"
+                        "Imagine {FreeText}"
                     ]
                 }
             ],
@@ -40,7 +43,7 @@
         "dialog": {
             "intents": [
                 {
-                    "name": "RepeatTestIntent",
+                    "name": "WhateverIntent",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [
