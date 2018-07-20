@@ -15,15 +15,9 @@
                     "name": "AMAZON.StopIntent",
                     "samples": []
                 },
+                
                 {
-                    "name": "HelloWorldIntent",
-                    "slots": [],
-                    "samples": [
-                        "hello"
-                    ]
-                },
-                {
-                    "name": "WhateverIntent",
+                    "name": "generateAnswerIntent",
                     "slots": [
                         {
                             "name": "FreeText",
@@ -34,7 +28,7 @@
                         }
                     ],
                     "samples": [
-                        "Imagine {FreeText}"
+                        "{FreeText}"
                     ]
                 }
             ],
@@ -43,7 +37,7 @@
         "dialog": {
             "intents": [
                 {
-                    "name": "WhateverIntent",
+                    "name": "generateAnswerIntent",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [
