@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "Theater Play Learning",
+            "invocationName": "theater play learning",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
