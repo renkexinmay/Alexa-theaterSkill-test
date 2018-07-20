@@ -16,14 +16,7 @@
                     "samples": []
                 },
                 {
-                    "name": "HelloWorldIntent",
-                    "slots": [],
-                    "samples": [
-                        "hello"
-                    ]
-                },
-                {
-                    "name": "WhateverIntent",
+                    "name": "RepeatTestIntent",
                     "slots": [
                         {
                             "name": "FreeText",
@@ -34,7 +27,7 @@
                         }
                     ],
                     "samples": [
-                        "Imagine {FreeText}"
+                        "Repeat {FreeText}"
                     ]
                 }
             ],
@@ -43,7 +36,7 @@
         "dialog": {
             "intents": [
                 {
-                    "name": "WhateverIntent",
+                    "name": "RepeatTestIntent",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [
