@@ -21,28 +21,13 @@ const LaunchRequestHandler = {
   },
 };
 
-const HelloWorldIntentHandler = {
+const RepeatTestIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'HelloWorldIntent';
+      && handlerInput.requestEnvelope.request.intent.name === 'RepeatTestIntent';
   },
   handle(handlerInput) {
-    const speechText = 'Hello Super World!';
-
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .withSimpleCard('Hello World', speechText)
-      .getResponse();
-  },
-};
-
-const WhateverIntentHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'WhateverIntent';
-  },
-  handle(handlerInput) {
-  	console.log('Whateverintent started')
+  	console.log('Repeatintent started')
     const currentIntent = handlerInput.requestEnvelope.request.intent;
     var prompt = '';
     for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
@@ -55,7 +40,7 @@ const WhateverIntentHandler = {
     return handlerInput.responseBuilder
       .speak(prompt)
       .reprompt(prompt)
-      .withSimpleCard('Hello World', prompt)
+      .withSimpleCard('repeat test', prompt)
       .getResponse();
 
   },
@@ -67,12 +52,12 @@ const HelpIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.HelpIntent';
   },
   handle(handlerInput) {
-    const speechText = 'You can say hello to me!';
+    const speechText = 'You can say REPEAT to me';
 
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
-      .withSimpleCard('Hello World', speechText)
+      .withSimpleCard('repeat test', speechText)
       .getResponse();
   },
 };
@@ -88,7 +73,7 @@ const CancelAndStopIntentHandler = {
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard('Hello World', speechText)
+      .withSimpleCard('repeat test', speechText)
       .getResponse();
   },
 };
@@ -125,7 +110,7 @@ const languageStrings = {
   en: {
     translation: {
       SKILL_NAME: 'Minecraft Helper',
-      WELCOME_MESSAGE: 'Welcome to hello world',
+      WELCOME_MESSAGE: 'Welcome to repeat test',
       WELCOME_REPROMPT: 'For instructions on what you can say, please say help me.',
       DISPLAY_CARD_TITLE: '%s  - Recipe for %s.',
       HELP_MESSAGE: 'You can ask questions such as, what\'s the recipe for a %s, or, you can say exit...Now, what can I help you with?',
@@ -141,7 +126,7 @@ const languageStrings = {
   fr: {
     translation: {
       SKILL_NAME: 'Assistent für Minecraft in Deutsch',
-      WELCOME_MESSAGE: 'Bienvenue sur bonjour monde',
+      WELCOME_MESSAGE: 'Bienvenue sur repeat test',
       WELCOME_REPROMPT: 'Wenn du wissen möchtest, was du sagen kannst, sag einfach „Hilf mir“.',
       DISPLAY_CARD_TITLE: '%s - Rezept für %s.',
       HELP_MESSAGE: 'Du kannst beispielsweise Fragen stellen wie „Wie geht das Rezept für eine %s“ oder du kannst „Beenden“ sagen ... Wie kann ich dir helfen?',
@@ -179,8 +164,7 @@ const LocalizationInterceptor = {
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
-    HelloWorldIntentHandler,
-    WhateverIntentHandler,
+    RepeatTestIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
