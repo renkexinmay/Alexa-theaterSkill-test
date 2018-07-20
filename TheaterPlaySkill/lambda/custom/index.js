@@ -28,20 +28,18 @@ const generateAnswerHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'generateAnswerIntent';
   },
   handle(handlerInput) {
-  	console.log('generateAnswerintent started')
-    const currentIntent = handlerInput.requestEnvelope.request.intent;
-    var prompt = '';
-    for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
-      const currentSlot = currentIntent.slots[slotName];
-      console.log(currentSlot.value);
-      prompt = currentSlot.value + prompt
-    }
-    prompt = 'You said '+ prompt;
+    var answers = [
+      "The weather is nice today",
+      "How are you",
+      "What a crazy skill!"
+     ]
 
+    var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+    
     return handlerInput.responseBuilder
-      .speak(prompt)
-      .reprompt(prompt)
-      .withSimpleCard('Hello World', prompt)
+      .speak(randomAnswer)
+      .reprompt(randomAnswer)
+      .withSimpleCard('generateAnswer', randomAnswer)
       .getResponse();
 
   },
