@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "theater play learning",
+            "invocationName": "theater learning",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -28,7 +28,11 @@
                         }
                     ],
                     "samples": [
-                        "{FreeText}"
+                       "Repeat {FreeText}",
+                        "Please repeat {FreeText}",
+                        "Can you repeat {FreeText}",
+                        "I want you to repeat {FreeText}",
+                        "Repeat {FreeText} please"
                     ]
                 }
             ],
