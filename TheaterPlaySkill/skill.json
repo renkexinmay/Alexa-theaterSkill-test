@@ -9,7 +9,7 @@
             "hello",
             "help"
           ],
-          "name": "Theater Play Learning",
+          "name": "TheaterPlaySkill",
           "description": "Sample Full Description"
         },
         "fr-FR": {
@@ -19,7 +19,7 @@
             "hello",
             "help"
           ],
-          "name": "Theater Play Learning",
+          "name": "TheaterPlayLearning",
           "description": "Sample Full Description"
         }
       },
