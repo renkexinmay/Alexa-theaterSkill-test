@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "hello world",
+            "invocationName": "repeat test",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
