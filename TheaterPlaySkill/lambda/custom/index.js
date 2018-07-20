@@ -125,7 +125,7 @@ const languageStrings = {
   en: {
     translation: {
       SKILL_NAME: 'Minecraft Helper',
-      WELCOME_MESSAGE: 'Welcome to hello world',
+      WELCOME_MESSAGE: 'Do you want to start a specific scene or restart where we left last time',
       WELCOME_REPROMPT: 'For instructions on what you can say, please say help me.',
       DISPLAY_CARD_TITLE: '%s  - Recipe for %s.',
       HELP_MESSAGE: 'You can ask questions such as, what\'s the recipe for a %s, or, you can say exit...Now, what can I help you with?',
@@ -141,7 +141,7 @@ const languageStrings = {
   fr: {
     translation: {
       SKILL_NAME: 'Assistent für Minecraft in Deutsch',
-      WELCOME_MESSAGE: 'Bienvenue sur bonjour monde',
+      WELCOME_MESSAGE: 'Do you want to start a specific scene or restart where we left last time',
       WELCOME_REPROMPT: 'Wenn du wissen möchtest, was du sagen kannst, sag einfach „Hilf mir“.',
       DISPLAY_CARD_TITLE: '%s - Rezept für %s.',
       HELP_MESSAGE: 'Du kannst beispielsweise Fragen stellen wie „Wie geht das Rezept für eine %s“ oder du kannst „Beenden“ sagen ... Wie kann ich dir helfen?',
