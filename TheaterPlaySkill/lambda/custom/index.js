@@ -49,44 +49,33 @@ const generateAnswerIntentHandler = {
 	    "How are you",
 	    "What a crazy skill!"
     ]
-
-    var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
     
+    function RandomAns() {
+	var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+    }
+	  
+    function Repeat() {
+	    const currentIntent = handlerInput.requestEnvelope.request.intent;
+	    var prompt = '';
+	    for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
+		    const currentSlot = currentIntent.slots[slotName]; 
+		    console.log(currentSlot.value);
+		    prompt = currentSlot.value + prompt
+	    }
+	    prompt = 'You said '+ prompt;
+	    
+	    #var repeatAnswer = ;
+	    #1st round == na; 1+ round = repeat
+    }
+	  
     return handlerInput.responseBuilder
-      .speak(randomAnswer)
-      .reprompt(randomAnswer)
+      .speak(repeatAnswer + randomAnswer)
+      .reprompt(repeatAnswer + randomAnswer)
       .withSimpleCard('theater play learning', randomAnswer)
       .getResponse();
 
   },
 };
-
-const RepeatIntentHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'RepeatIntent';
-  },
-  handle(handlerInput) {
-    const currentIntent = handlerInput.requestEnvelope.request.intent;
-    var prompt = '';
-    for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
-      const currentSlot = currentIntent.slots[slotName];
-      console.log(currentSlot.value);
-      prompt = currentSlot.value + prompt
-    }
-    prompt = 'You said '+ prompt;
-
-    return handlerInput.responseBuilder
-      .speak(prompt)
-      .reprompt(prompt)
-      .withSimpleCard('repeat test', prompt)
-      .getResponse();
-
-  },
-};
-
-#trigger generate Answer
-#only for answers in and after second round
 
 const HelpIntentHandler = {
   canHandle(handlerInput) {
@@ -207,7 +196,6 @@ exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
     generateAnswerIntentHandler,
-    RepeatIntentHandler
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
