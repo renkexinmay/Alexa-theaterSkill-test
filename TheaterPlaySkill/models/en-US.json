@@ -27,10 +27,7 @@
                             ]
                         }
                     ],
-                    "samples": [
-                        "Imagine {FreeText}",
-                        "{FreeText}"
-                    ]
+                    "samples": []
                 }
             ],
             "types": []
