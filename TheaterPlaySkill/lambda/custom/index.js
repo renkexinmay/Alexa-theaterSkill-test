@@ -33,10 +33,11 @@ const LaunchRequestHandler = {
 		  .speak(welcomeMessage)
 		  .reprompt(welcomeMessage)
 		  .getResponse();
-	}
+    },
   },
 };
-
+	
+var calltime = 0
 
 const generateAnswerIntentHandler = {
   canHandle(handlerInput) {
@@ -63,9 +64,12 @@ const generateAnswerIntentHandler = {
 		    prompt = currentSlot.value + prompt
 	    }
 	    prompt = 'You said '+ prompt;
-	    
-	    #var repeatAnswer = ;
-	    #1st round == na; 1+ round = repeat
+	    calltime ++;
+	    if(calltime > 1) { 
+		    var repeatAnswer = "";
+	    } else {
+		    var repeatAnswer = prompt;
+	    }
     }
 	  
     return handlerInput.responseBuilder
@@ -73,7 +77,6 @@ const generateAnswerIntentHandler = {
       .reprompt(repeatAnswer + randomAnswer)
       .withSimpleCard('theater play learning', randomAnswer)
       .getResponse();
-
   },
 };
 
