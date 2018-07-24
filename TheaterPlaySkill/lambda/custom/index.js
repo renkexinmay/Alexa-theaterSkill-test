@@ -45,17 +45,17 @@ const generateAnswerIntentHandler = {
   },
   handle(handlerInput) {
     var answers = [
-      "The weather is nice today",
-      "How are you",
-      "What a crazy skill!"
-     ]
+	    "The weather is nice today",
+	    "How are you",
+	    "What a crazy skill!"
+    ]
 
     var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
     
     return handlerInput.responseBuilder
       .speak(randomAnswer)
       .reprompt(randomAnswer)
-      .withSimpleCard('generateAnswer', randomAnswer)
+      .withSimpleCard('theater play learning', randomAnswer)
       .getResponse();
 
   },
@@ -72,7 +72,7 @@ const HelpIntentHandler = {
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
-      .withSimpleCard('Hello World', speechText)
+      .withSimpleCard('theater play learning', speechText)
       .getResponse();
   },
 };
@@ -88,7 +88,7 @@ const CancelAndStopIntentHandler = {
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard('Hello World', speechText)
+      .withSimpleCard('theater play learning', speechText)
       .getResponse();
   },
 };
