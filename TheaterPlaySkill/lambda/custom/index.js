@@ -54,34 +54,32 @@ const generateAnswerIntentHandler = {
 	    "What a crazy skill!"
     ]
     
-    function RandomAns() {
-	var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
-    }
+    var prompt = '';
+	  var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
 	  
-    function Repeat() {
-	    const currentIntent = handlerInput.requestEnvelope.request.intent;
-	    var prompt = '';
-	    for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
-		    const currentSlot = currentIntent.slots[slotName]; 
-		    console.log(currentSlot.value);
-		    prompt = currentSlot.value + prompt
-	    }
-	    prompt = 'You said '+ prompt;
-	    calltime ++;
-	    if(calltime > 1) { 
-		    var repeatAnswer = "";
-	    } else {
-		    var repeatAnswer = prompt;
-	    }
-    }
+    calltime++;
 	  
-    return handlerInput.responseBuilder
-      .speak(repeatAnswer + randomAnswer)
-      .reprompt(repeatAnswer + randomAnswer)
-      .withSimpleCard('theater play learning', randomAnswer)
-      .getResponse();
+	  if(calltime>1) {
+		  const currentIntent = handlerInput.requestEnvelope.request.intent;
+		  for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
+			  const currentSlot = currentIntent.slots[slotName]; 
+			  console.log(currentSlot.value);
+			  prompt = currentSlot.value + prompt;
+		  }
+		  prompt = 'You said '+ prompt + randomAnswer;
+	  } else {
+		  prompt = randomAnswer;
+	  }
+  
+	return handlerInput.responseBuilder
+	.speak(repeatAnswer + randomAnswer)
+	.reprompt(repeatAnswer + randomAnswer)
+	.withSimpleCard('theater play learning', randomAnswer)
+	.getResponse();
   },
 };
+
+
 
 const HelpIntentHandler = {
   canHandle(handlerInput) {
