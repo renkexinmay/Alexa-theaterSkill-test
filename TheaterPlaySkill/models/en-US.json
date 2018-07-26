@@ -27,7 +27,11 @@
                             ]
                         }
                     ],
-                    "samples": ["Imagine {FreeText}"
+                    "samples": [
+                        "Imagine {FreeText}",
+                        "start a specific scene",
+                        "restart",
+                        "restart where we left last time"
                     ]
                 }
             ],
