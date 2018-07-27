@@ -72,9 +72,9 @@ const generateAnswerIntentHandler = {
 	  }
   
 	return handlerInput.responseBuilder
-	.speak(repeatAnswer + randomAnswer)
-	.reprompt(repeatAnswer + randomAnswer)
-	.withSimpleCard('theater play learning', randomAnswer)
+	.speak(prompt)
+	.reprompt(prompt)
+	.withSimpleCard('theater play learning', prompt)
 	.getResponse();
   },
 };
