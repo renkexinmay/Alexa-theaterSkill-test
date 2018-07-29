@@ -35,7 +35,14 @@ const RepeatTestIntentHandler = {
       console.log(currentSlot.value);
       prompt = currentSlot.value + prompt
     }
-    prompt = 'You said '+ prompt + 'hi';
+    
+    const answers = [
+	    "The weather is nice today",
+	    "How are you",
+	    "What a crazy skill!"];
+    var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+    
+    prompt = 'You said '+ prompt + ' ' + randomAnswer;
 
     return handlerInput.responseBuilder
       .speak(prompt)
