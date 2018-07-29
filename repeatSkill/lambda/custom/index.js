@@ -35,7 +35,7 @@ const RepeatTestIntentHandler = {
       console.log(currentSlot.value);
       prompt = currentSlot.value + prompt
     }
-    prompt = 'You said '+ prompt;
+    prompt = 'You said '+ prompt + 'hi';
 
     return handlerInput.responseBuilder
       .speak(prompt)
