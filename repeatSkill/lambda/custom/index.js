@@ -44,8 +44,11 @@ const RepeatTestIntentHandler = {
 	    "What a crazy skill!"];
     var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
     
-	  
-    prompt = countConversation + 'You said '+ prompt + ' ' + randomAnswer;
+	if(countConversation>1){  
+		prompt = countConversation + 'You said '+ prompt + ' ' + randomAnswer;}
+	  else {prompt = countConversation +  randomAnswer;}
+		
+		
 
     return handlerInput.responseBuilder
       .speak(prompt)
