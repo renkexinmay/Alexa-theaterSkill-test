@@ -23,13 +23,13 @@ const LaunchRequestHandler = {
 
 var countConversation = 0;
 
-const RepeatTestIntentHandler = {
+const generateAnswerIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'RepeatTestIntent';
+      && handlerInput.requestEnvelope.request.intent.name === 'generateAnswerIntent';
   },
   handle(handlerInput) {
-  	console.log('Repeatintent started')
+  	console.log('generaetAnswerintent started')
     const currentIntent = handlerInput.requestEnvelope.request.intent;
     var prompt = '';
     for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
@@ -45,8 +45,8 @@ const RepeatTestIntentHandler = {
     var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
     
 	if(countConversation>1){  
-		prompt = countConversation + 'You said '+ prompt + ' ' + randomAnswer;}
-	  else {prompt = countConversation +  randomAnswer;}
+		prompt = 'You said '+ prompt + ' ' + randomAnswer;}
+	  else {prompt =  randomAnswer;}
 		
 		
 
