@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "repeat test",
+            "invocationName": "theater learning",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -16,14 +16,20 @@
                     "samples": []
                 },
                 {
-                    "name": "RepeatTestIntent",
+                    "name": "generateAnswerIntent",
                     "slots": [
                         {
                             "name": "FreeText",
-                            "type": "AMAZON.LITERAL",
-                            
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "Yes"
+                            ]
                         }
-
+                    ],
+                    "samples": [
+                        "Imagine {FreeText}"
+                      
+   
                     ]
                 }
             ],
@@ -32,13 +38,13 @@
         "dialog": {
             "intents": [
                 {
-                    "name": "RepeatTestIntent",
+                    "name": "generateAnswerIntent",
                     "confirmationRequired": false,
                     "prompts": {},
                     "slots": [
                         {
                             "name": "FreeText",
-                            "type": "AMAZON.LITERAL",
+                            "type": "AMAZON.SearchQuery",
                             "confirmationRequired": true,
                             "elicitationRequired": true,
                             "prompts": {
