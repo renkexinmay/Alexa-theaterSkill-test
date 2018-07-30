@@ -21,6 +21,8 @@ const LaunchRequestHandler = {
   },
 };
 
+var countConversation = 0;
+
 const RepeatTestIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
@@ -35,14 +37,15 @@ const RepeatTestIntentHandler = {
       console.log(currentSlot.value);
       prompt = currentSlot.value + prompt
     }
-    
+    countConversation++;
     const answers = [
 	    "The weather is nice today",
 	    "How are you",
 	    "What a crazy skill!"];
     var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
     
-    prompt = 'You said '+ prompt + ' ' + randomAnswer;
+	  
+    prompt = countConversation + 'You said '+ prompt + ' ' + randomAnswer;
 
     return handlerInput.responseBuilder
       .speak(prompt)
