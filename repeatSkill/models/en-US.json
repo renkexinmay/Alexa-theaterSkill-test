@@ -34,7 +34,7 @@
                     "slots": [
                         {
                             "name": "FreeText",
-                            "type": "AMAZON.SearchQuery",
+                            "type": "AMAZON.LITERAL",
                             "confirmationRequired": true,
                             "elicitationRequired": true,
                             "prompts": {
