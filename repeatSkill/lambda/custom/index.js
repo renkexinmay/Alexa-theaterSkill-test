@@ -45,7 +45,7 @@ const generateAnswerIntentHandler = {
     var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
     
 	if(countConversation>1){  
-		prompt = currentIntent +'You said '+ prompt + ' ' + randomAnswer;}
+		prompt = 'You said '+ prompt + ' ' + randomAnswer;}
 	  else {prompt =  randomAnswer;}
 		
 		
