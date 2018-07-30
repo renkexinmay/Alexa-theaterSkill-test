@@ -18,8 +18,12 @@
                 {
                     "name": "RepeatTestIntent",
                     "slots": [
-                        "name": "FreeText",
-                        "type": "AMAZON.LITERAL"
+                        {
+                            "name": "FreeText",
+                            "type": "AMAZON.LITERAL",
+                            
+                        }
+
                     ]
                 }
             ],
