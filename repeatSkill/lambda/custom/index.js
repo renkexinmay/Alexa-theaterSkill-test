@@ -35,7 +35,7 @@ const generateAnswerIntentHandler = {
     for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
       const currentSlot = currentIntent.slots[slotName];
       console.log(currentSlot.value);
-      prompt = currentSlot.value + prompt
+      prompt = currentIntent.value + prompt
     }
     countConversation++;
     const answers = [
