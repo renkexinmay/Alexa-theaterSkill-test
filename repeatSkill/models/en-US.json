@@ -28,7 +28,7 @@
                     ],
                     "samples": [
                         "I {FreeText}",
-                        "resatrt {FreeText}",
+                        "restart {FreeText}",
                         "start {FreeText}",
                         "what {FreeText}",
                         "how {FreeText}",
