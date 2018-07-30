@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "theater learning",
+            "invocationName": "repea test",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -27,7 +27,7 @@
                         }
                     ],
                     "samples": [
-                        "Imagine {FreeText}"
+                        "restrat {FreeText}"
                       
    
                     ]
