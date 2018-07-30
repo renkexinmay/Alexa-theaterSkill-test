@@ -177,7 +177,7 @@ const LocalizationInterceptor = {
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
-    RepeatTestIntentHandler,
+    generateAnswerIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
