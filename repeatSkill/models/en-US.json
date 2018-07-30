@@ -27,7 +27,14 @@
                         }
                     ],
                     "samples": [
-                        "I {FreeText}"
+                        "I {FreeText}",
+                        "resatrt {FreeText}",
+                        "start {FreeText}",
+                        "what {FreeText}",
+                        "how {FreeText}",
+                        "can {FreeText}",
+                        "you {FreeText}",
+                        "yes {FreeText}"
 
                     ]
                 }
