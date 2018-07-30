@@ -27,11 +27,8 @@
                         }
                     ],
                     "samples": [
-                        "Repeat {FreeText}",
-                        "Please repeat {FreeText}",
-                        "Can you repeat {FreeText}",
-                        "I want you to repeat {FreeText}",
-                        "Repeat {FreeText} please"
+                        "{FreeText} "
+
                     ]
                 }
             ],
