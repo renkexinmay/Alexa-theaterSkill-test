@@ -123,7 +123,7 @@ const languageStrings = {
   en: {
     translation: {
       SKILL_NAME: 'Minecraft Helper',
-      WELCOME_MESSAGE: 'Welcome to repeat test',
+      WELCOME_MESSAGE: 'Do you want to start a specific scene or restart where we left last time',
       WELCOME_REPROMPT: 'For instructions on what you can say, please say help me.',
       DISPLAY_CARD_TITLE: '%s  - Recipe for %s.',
       HELP_MESSAGE: 'You can ask questions such as, what\'s the recipe for a %s, or, you can say exit...Now, what can I help you with?',
