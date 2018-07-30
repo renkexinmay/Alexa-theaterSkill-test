@@ -24,17 +24,10 @@
                             "samples": [
                                 "Yes"
                             ]
-                        },
-                        {
-                            "name": "FreePhrase",
-                            "type": "AMAZON.SearchQuery",
-                            "samples": [
-                                "Yes"
-                            ]
                         }
                     ],
                     "samples": [
-                        "{FreeText} {FreePhrase}"
+                        "I {FreeText}"
 
                     ]
                 }
