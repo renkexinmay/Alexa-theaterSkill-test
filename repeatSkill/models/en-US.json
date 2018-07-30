@@ -18,24 +18,8 @@
                 {
                     "name": "RepeatTestIntent",
                     "slots": [
-                        {
-                            "name": "FreeText",
-                            "type": "AMAZON.SearchQuery",
-                            "samples": [
-                                "Yes"
-                            ]
-                        }
-                    ],
-                    "samples": [
-                        "I {FreeText}",
-                        "restart {FreeText}",
-                        "start {FreeText}",
-                        "what {FreeText}",
-                        "how {FreeText}",
-                        "can {FreeText}",
-                        "you {FreeText}",
-                        "yes {FreeText}"
-
+                        "name": "FreeText",
+                        "type": "AMAZON.LITERAL"
                     ]
                 }
             ],
