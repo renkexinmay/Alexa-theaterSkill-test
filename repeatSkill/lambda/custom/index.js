@@ -35,7 +35,7 @@ const generateAnswerIntentHandler = {
     for (const slotName of Object.keys(handlerInput.requestEnvelope.request.intent.slots)) {
       const currentSlot = currentIntent.slots[slotName];
       console.log(currentSlot.value);
-      prompt = currentIntent.value + prompt
+      prompt = currentSlot.value + prompt
     }
     countConversation++;
     const answers = [
@@ -45,7 +45,7 @@ const generateAnswerIntentHandler = {
     var randomAnswer = answers[Math.floor(Math.random() * answers.length)];
     
 	if(countConversation>1){  
-		prompt = currentIntent.value +'You said '+ prompt + ' ' + randomAnswer;}
+		prompt = currentIntent +'You said '+ prompt + ' ' + randomAnswer;}
 	  else {prompt =  randomAnswer;}
 		
 		
